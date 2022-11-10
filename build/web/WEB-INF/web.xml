@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <context-param>
+        <param-name>pageHeader</param-name>
+        <param-value>Machine Problem 4</param-value>
+    </context-param>
+    <context-param>
+        <param-name>pageFooter</param-name>
+        <param-value>Copyright © Jan Andrei Carlos</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>LogInServlet</servlet-name>
+        <servlet-class>LogInServlet</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>Jan Andrei Carlos</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>1234</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>HobbyServlet</servlet-name>
+        <servlet-class>HobbyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogInServlet</servlet-name>
+        <url-pattern>/LogInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HobbyServlet</servlet-name>
+        <url-pattern>/HobbyServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>LogInPage.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

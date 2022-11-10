@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Animation background*/
+body{
+    width:100%;
+    height: auto;
+    color: #fff;
+    background: linear-gradient(-45deg, #000000, #5c0f0f,#49051f );
+    background-size: 400vh;
+    position: relative;
+    animation: change 8s ease-in-out infinite;
+}
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/*LogIn Page Logo*/
+.LogInPageLogo{
+    max-width:50%;
+    height:20%;
+}
+
+.ErrorPageLogo{
+    max-width:50%;
+    height:20%;
+}
+
+/*Page Logo*/
+.pageLogo{
+    /* position: fixed;
+    left:1200px;
+    top: 90px;
+    max-width:80%;
+    height: auto;  */
+    width: 30%;
+    float:right;
+    animation: logoAnimate 2s linear infinite;
+    border-radius: 50%;
+}
+.pageLogo img{
+    width: 100%;
+    height: 100%;
+}
+/*page logo animation (heartbeat effect)*/
+@keyframes logoAnimate{
+    0%{
+        transform: rotate(0) translate(10px,10px) scale(1);
+
+    }
+    50%{
+        transform: rotate(0) translate(10px,10px) scale(1.2);
+    }
+    100%{
+        transform: rotate(0) translate(10px,10px) scale(1);
+    }
+}
+/*my picture*/
+.myPicture{
+    width: 30%;
+    float:left;
+    border: 5px solid white;
+}
+.myPicture img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    color: black;
+}
+
+/* Collapsible buttons*/
+.collapsible {
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: rgb(94, 91, 91);
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+.expertiseImg{
+    max-width:100%;
+    height: auto;
+}
+
+.P5openingDesign{
+    width: 35%;
+    float: left;
+    border: 5px solid white;
+
+}
+.P5openingDesign img{
+    width: 100%;
+    height: 100%;
+
+}
+/*customized scrollbar*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+/*Justifying About Me*/
+.justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/*Animation for my Header*/
+.sign {
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    bottom: 0;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 2vw;
+    color: #0a0000;
+    text-shadow: 0 0 0.6rem #c90808, 0 0 1.5rem #fa0404,
+        -0.2rem 0.1rem 1rem #640303, 0.2rem 0.1rem 1rem #770303,
+        0 -0.5rem 2rem #4b0000, 0 0.5rem 3rem #a10000;
+    animation: shine 2s forwards, flicker 3s infinite;
+    width:100%;
+     height:auto;
+}
+
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #ff0000;
+        text-shadow: 0 0 0.6rem #e70707, 0 0 1.5rem #640202,
+            -0.2rem 0.1rem 1rem #6b0101, 0.2rem 0.1rem 1rem #4e0000,
+            0 -0.5rem 2rem #bd0303, 0 0.5rem 3rem #d40c0c;
+    }
+    28%,
+    33% {
+        color: #ff0202;
+        text-shadow: none;
+    }
+    82%,
+    97% {
+        color: #e20101;
+        text-shadow: none;
+    }
+}
+
+.flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+    0% {
+        color: #6b1839;
+        text-shadow: none;
+    }
+    100% {
+        color: #f80606;
+        text-shadow: 0 0 0.6rem #ff0000, 0 0 1.5rem #9b0b0b,
+            -0.2rem 0.1rem 1rem #860202, 0.2rem 0.1rem 1rem #850101,
+            0 -0.5rem 2rem #f80000, 0 0.5rem 3rem #4d0000;
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.9;
+    }
+
+    6% {
+        opacity: 0.85;
+    }
+
+    8% {
+        opacity: 0.95;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    11% {
+        opacity: 0.922;
+    }
+
+    12% {
+        opacity: 0.9;
+    }
+
+    14% {
+        opacity: 0.95;
+    }
+
+    16% {
+        opacity: 0.98;
+    }
+
+    17% {
+        opacity: 0.9;
+    }
+
+    19% {
+        opacity: 0.93;
+    }
+
+    20% {
+        opacity: 0.99;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0.94;
+    }
+
+    28% {
+        opacity: 0.98;
+    }
+
+    37% {
+        opacity: 0.93;
+    }
+
+    38% {
+        opacity: 0.5;
+    }
+
+    39% {
+        opacity: 0.96;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 0.97;
+    }
+
+    46% {
+        opacity: 0.94;
+    }
+
+    56% {
+        opacity: 0.9;
+    }
+
+    58% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.99;
+    }
+
+    68% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.9;
+    }
+
+    72% {
+        opacity: 0.95;
+    }
+
+    93% {
+        opacity: 0.93;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    97% {
+        opacity: 0.93;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Zooms image when hovering */
+.zoom{} .zoom:hover {
+                transform: scale(1.15);
+            }
+            
+/* Displays Images in a row */
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+/* TO MAKE IMAGES RESPONSIVE */
+img {
+     width:100%;
+     height:auto;
+}
+
+
+
+/* CUSTOMIZED LOGOUT BUTTON */
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #800000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width:50%;
+  height:auto;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
